@@ -19,8 +19,12 @@ const Container = styled.div`
 // `
 
 export const Task = ({ task, index }) => {
+  
   return (
-    <Draggable draggableId={task.id} index={index}>
+    <Draggable draggableId={task.id} index={index}
+    //disables a drag if true by boolean or whatever params  
+    // isDragDisabled={task.id === 'task-1'}
+      >
       {(provided, snapshot) => (
         <Container
           {...provided.draggableProps}

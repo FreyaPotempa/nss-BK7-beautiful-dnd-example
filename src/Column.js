@@ -27,7 +27,12 @@ export const Column = ({ column, tasks }) => {
   return (
     <Container>
       <Title>{column.title}</Title>
-      <Droppable droppableId={column.id}>
+      <Droppable droppableId={column.id}
+
+// controls droppable areas
+      //type={column.id === 'column-3' ? 'done' : 'active'}
+      //isDropDisabled={column.id === 'column-2'} 
+      >
         {(provided, snapshot) => (
           <TaskList
             ref={provided.innerRef}

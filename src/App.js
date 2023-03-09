@@ -14,7 +14,9 @@ export const App = () => {
   const [taskData, setTaskData] = useState(initialData);
 
   const onDragStart = () => {
-    document.body.style.color = "orange";
+    //this isn't best practice for selecting, instead use a styled component with a ternary statement like in "isDragging"
+    //document.body.style.color = "orange";
+
   };
 
   //DIDNT WORK plus don't really understand or need this
@@ -27,7 +29,7 @@ export const App = () => {
   // }
 
   const onDragEnd = (result) => {
-    document.body.style.color = "inherit";
+    //document.body.style.color = "inherit";
     const { destination, source, draggableId } = result;
 
     if (!destination) {
